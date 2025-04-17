@@ -1,0 +1,259 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: auto;
+    /* allow page to grow */
+
+    width: 100%;
+    height: 100%;
+    font-family: 'Popcodes', sans-serif;
+    /* background-color: #222; */
+    background: #5775b5;
+    background: radial-gradient(circle, rgba(87, 117, 181, 1) 0%, rgba(67, 73, 145, 1) 35%, rgba(0, 81, 97, 1) 100%);
+    overflow-x: hidden;
+}
+
+
+/* #### NAVBAR */
+
+#navbar-container {
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar-form {
+    display: flex;
+    justify-content: center;
+    /* align-items: center;   */
+    height: 32px;
+    width: 100%;
+}
+
+#navbar-form input[type="text"] {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #f2f2f2;
+    font-size: 16px;
+    color: #333;
+}
+
+#navbar-form input[type="submit"] {
+    width: 25%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#navbar-hamburger-icon {
+    display: inline;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+#navbar-hamburger-menu * {
+    transition: all 0.3s ease-in-out;
+
+}
+
+#navbar-hamburger-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #9dc8cb;
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 9999;
+}
+
+#navbar-hamburger-menu.active {
+    display: block;
+    transform: translateX(0);
+}
+
+#navbar-hamburger-menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+}
+
+#navbar-hamburger-menu-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#navbar-hamburger-menu-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    margin: 0 20px 20px 20px;
+    background-color: transparent;
+    border: 1px solid gray;
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#navbar-hamburger-menu-links a:hover {
+    background-color: aliceblue;
+    color: #2e2e2e;
+    border-radius: 15px;
+}
+
+
+
+
+/* #### INDEX */
+
+
+
+
+
+#index-container {
+    width: 100%;
+    /* height: 100%; */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 0;
+    box-sizing: border-box;
+}
+
+#index-box {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(6.3px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 90%;
+    max-width: 1200px;
+    /* height: 100%; */
+    /* min-height: 100vh !important; */
+    margin: 0 20px;
+    padding: 20px;
+}
+
+#index-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#index-table thead * {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+    /* background-color: #f2f2f2; */
+    font-weight: bolder;
+    color: #f2f2f2;
+}
+
+
+
+#index-table tbody * {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+    /* background-color: #f2f2f2; */
+    color: #f2f2f2;
+
+}
+
+#index-table-pagination {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#index-table-pagination-pages {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+#index-table-pagination a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid gray;
+}
+
+#index-floating-buttons {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+#index-floating-buttons button {
+    background-color: #4CAF50;
+    border: none;
+    padding: 8px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#index-floating-buttons button svg {
+    width: 32px;
+    height: 32px;
+}
+
+#index-filter-menu-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width:  100%;
+}
+
+
+@media (max-width: 767px) {
+    #index-box {
+        margin: 10px !important;
+    }
+}
